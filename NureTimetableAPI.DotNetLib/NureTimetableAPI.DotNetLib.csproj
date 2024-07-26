@@ -8,6 +8,8 @@
 	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
 	  <PackageReadmeFile>README.md</PackageReadmeFile>
+	  <PackageTags>nure khnure api-library NURE NureTimetableAPI</PackageTags>
+	  <Copyright>(C) 2024 music-soul1-1</Copyright>
   </PropertyGroup>
 
   <ItemGroup>
