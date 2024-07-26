@@ -2,6 +2,14 @@
 
 .NET library for working with [NureTimetableAPI](https://github.com/music-soul1-1/NureTimetableAPI)
 
+## Installation
+
+To install the package, go to NuGet Package Manager, and search:
+
+```
+NureTimetableAPI.DotNetLib
+```
+
 ## Usage
 
 The library is structured the way that you can use different versions of the API.
