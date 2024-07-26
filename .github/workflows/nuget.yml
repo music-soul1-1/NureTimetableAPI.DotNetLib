@@ -35,7 +35,7 @@ jobs:
       with:
         dotnet-version: 8.0.x
     - name: Build and Pack NuGet package
-      run: dotnet pack NureTimetableAPI.DotNetLib/NureTimetableAPI.DotNetLib.csproj -p:Version='${{ steps.gitversion.outputs.SemVer }}' -c Release
+      run: dotnet pack NureTimetableAPI.DotNetLib.csproj -p:Version='${{ steps.gitversion.outputs.SemVer }}' -c Release
     - name: Upload NuGet package to GitHub
       uses: actions/upload-artifact@v4
       with:
