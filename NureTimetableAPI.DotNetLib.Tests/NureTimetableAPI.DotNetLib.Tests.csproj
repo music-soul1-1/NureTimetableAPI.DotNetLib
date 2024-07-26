@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NureTimetableAPI.NetLib\NureTimetableAPI.DotNetLib.csproj" />
+    <ProjectReference Include="..\NureTimetableAPI.DotNetLib\NureTimetableAPI.DotNetLib.csproj" />
   </ItemGroup>
 
   <ItemGroup>
