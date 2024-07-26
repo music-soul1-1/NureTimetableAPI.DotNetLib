@@ -10,6 +10,7 @@
 	  <PackageReadmeFile>README.md</PackageReadmeFile>
 	  <PackageTags>nure khnure api-library NURE NureTimetableAPI</PackageTags>
 	  <Copyright>(C) 2024 music-soul1-1</Copyright>
+	  <Description>.NET library for working with NureTimetableAPI</Description>
   </PropertyGroup>
 
   <ItemGroup>
