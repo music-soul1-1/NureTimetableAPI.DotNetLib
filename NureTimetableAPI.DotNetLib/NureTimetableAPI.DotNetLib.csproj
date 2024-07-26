@@ -6,10 +6,13 @@
     <Nullable>enable</Nullable>
 	  <RepositoryUrl>https://github.com/music-soul1-1/NureTimetableAPI.DotNetLib</RepositoryUrl>
 	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
+	  <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+	<None Include="../README.md" Pack="true" PackagePath="\"/>
   </ItemGroup>
 
 </Project>
