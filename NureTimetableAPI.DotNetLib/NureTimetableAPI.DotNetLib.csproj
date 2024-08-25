@@ -12,7 +12,8 @@
 	  <Copyright>(C) 2024 music-soul1-1</Copyright>
 	  <Description>.NET library for working with NureTimetableAPI</Description>
 	  <PackageIcon>icon.png</PackageIcon>
-	  <VersionPrefix>1.0.1</VersionPrefix>
+	  <VersionPrefix>1.0.2</VersionPrefix>
+	  <PackageReleaseNotes>Added 2 methods to retrieve Combined entities</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>

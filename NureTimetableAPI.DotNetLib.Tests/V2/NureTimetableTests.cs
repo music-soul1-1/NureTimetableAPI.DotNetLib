@@ -110,6 +110,26 @@ public class NureTimetableTests
     }
 
     [TestMethod()]
+    public async Task AllCombinedEntitiesTest()
+    {
+        var combinedEntities = await NureTimetable.GetAllCombinedEntitiesAsync();
+
+        Assert.IsNotNull(combinedEntities);
+
+        var minimalCombinedEntities = await NureTimetable.GetAllMinimalCombinedEntitiesAsync();
+
+        Assert.IsNotNull(minimalCombinedEntities);
+
+        Logger.LogMessage($"Combined entities count: \nGroups: {combinedEntities.Groups.Count}.\n" +
+            $"Teachers: {combinedEntities.Teachers.Count}.\n" +
+            $"Auditories: {combinedEntities.Auditories.Count}.");
+
+        Logger.LogMessage($"Minimal combined entities count: \nGroups: {minimalCombinedEntities.Groups.Count}.\n" +
+            $"Teachers: {minimalCombinedEntities.Teachers.Count}.\n" +
+            $"Auditories: {minimalCombinedEntities.Auditories.Count}.");
+    }
+
+    [TestMethod()]
     public async Task AllLessonsAsyncMethodsTest()
     {
         var lessonsGotById = await NureTimetable.GetLessonsByIdAsync(10307432);

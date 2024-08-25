@@ -635,6 +635,56 @@ public class NureTimetable
 
     #endregion
 
+    #region Combined Entities
+
+    public static async Task<CombinedEntities?> GetAllCombinedEntitiesAsync()
+    {
+        try
+        {
+            var response = await _httpClient.GetAsync("Entities/GetAll");
+
+            if (!response.IsSuccessStatusCode)
+            {
+                throw new HttpRequestException($"Failed to get combined entities. Status code: {response.StatusCode}");
+            }
+
+            return JsonConvert.DeserializeObject<CombinedEntities>(await response.Content.ReadAsStringAsync());
+        }
+        catch (HttpRequestException ex)
+        {
+            throw new NureTimetableException(ex);
+        }
+        catch (Exception ex)
+        {
+            throw new NureTimetableException("Failed to get combined entities", ex);
+        }
+    }
+
+    public static async Task<MinimalCombinedEntities?> GetAllMinimalCombinedEntitiesAsync()
+    {
+        try
+        {
+            var response = await _httpClient.GetAsync("Entities/GetAll?useMinimalModels=true");
+
+            if (!response.IsSuccessStatusCode)
+            {
+                throw new HttpRequestException($"Failed to get minimal combined entities. Status code: {response.StatusCode}");
+            }
+
+            return JsonConvert.DeserializeObject<MinimalCombinedEntities>(await response.Content.ReadAsStringAsync());
+        }
+        catch (HttpRequestException ex)
+        {
+            throw new NureTimetableException(ex);
+        }
+        catch (Exception ex)
+        {
+            throw new NureTimetableException("Failed to get minimal combined entities", ex);
+        }
+    }
+
+    #endregion
+
     #region Lessons
 
     /// <summary>
